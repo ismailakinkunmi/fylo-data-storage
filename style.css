@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --bgcolor-BigBox: hsl(228, 56%, 26%);
+    --main-bgcolor: hsl(229, 57%, 11%);
+    --bgcolor-LeftDAtaBox: hsl(229, 7%, 55%);
+    --text-color: hsl(243, 100%, 93%);
+    --right-color: hsl(6, 100%, 80%);
+    --left-color: hsl(335, 100%, 65%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: var(--main-bgcolor);
+    color: var(--text-color);
+}
+
+
+.data-storage {
+    margin-top: 50vh;
+    height: 50vh;
+    background: no-repeat url('/images/bg-desktop.png');
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.data-storage .fylo-folder {
+    position: absolute;
+    top: -96px;
+    left: 280px;
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+    border-top-right-radius: calc(50% - 10px);
+    background: no-repeat center url('images/logo.svg'), var(--bgcolor-BigBox);
+    background-size: 100px;
+    background-position: left 40px top 40px;
+}
+
+.fylo-folder .imgcontainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: translate(40px, 100px);
+}
+
+.imgcontainer .img {
+    background-color: var(--main-bgcolor);
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    display: flex;
+    padding: 13px;
+    justify-content: center;
+}
+
+.data-storage .storage-folder {
+    position: absolute;
+    top: -46px;
+    right: 280px;
+    background-color: var(--bgcolor-BigBox);
+    border-radius: 10px;
+    width: 550px;
+    min-width: 350px;
+    height: 120px;
+    padding: 30px;
+}
+
+.used-storage {
+    margin-bottom: 12px;
+}
+
+.full-memory {
+    height: 14px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: var(--main-bgcolor);
+    width: 97%;
+}
+
+.used-memory {
+    height: 100%;
+    background-image: linear-gradient(to right, var(--right-color), var(--left-color));
+    border-radius: 8px;
+    width: 80%;
+    position: relative;
+    padding-right: 1%;
+}
+
+.white-dot {
+    position: absolute;
+    right: 1%;
+    height: 95%;
+    width: 12px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+}
+
+.storage-figure {
+    margin-top: 12px;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.storage-left {
+    width: 150px;
+    background-color: var(--text-color);
+    padding: 16px;
+    border-radius: 8px;
+    color: var(--bgcolor-LeftDAtaBox);
+    transform: translate(320px, -150px);
+}
+
+.storage-left .left-figure {
+    color: #000;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.storage-left .left-GB {
+    font-weight: bold;
+    display: block;
+    transform: translate(62px, -27px);
+    position: absolute;
+}
+
+@media screen and (max-width: 375px) {
+    .data-storage {
+        margin: auto;
+        min-width: 357px;
+        height: 100vh;
+        background: no-repeat url('/images/bg-mobile.png');
+        background-size: cover;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column nowrap;
+    }
+
+    .data-storage .fylo-folder {
+        width: 90%;
+        position: static;
+        background: no-repeat center url('images/logo.svg'), var(--bgcolor-BigBox);
+        background-size: 100px;
+        background-position: left 40px top 40px;
+    }
+
+    .data-storage .storage-folder {
+        position: static;
+        background-color: var(--bgcolor-BigBox);
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .storage-left {
+        width: 150px;
+        min-width: 120px;
+        background-color: var(--text-color);
+        padding: 16px;
+        border-radius: 8px;
+        color: var(--bgcolor-LeftDAtaBox);
+        transform: translate(45px, 0);
+        margin-right: 6px;
+
+    }
+
+
+}

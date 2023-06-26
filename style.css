@@ -29,7 +29,7 @@ body {
 .data-storage {
     margin-top: 50vh;
     height: 50vh;
-    background: no-repeat url('/images/bg-desktop.png');
+    background: no-repeat url('images/bg-desktop.png');
     background-size: cover;
     display: flex;
     flex-flow: row wrap;
@@ -42,7 +42,7 @@ body {
 .data-storage .fylo-folder {
     position: absolute;
     top: -96px;
-    left: 280px;
+    left: 230px;
     width: 300px;
     height: 170px;
     border-radius: 10px;
@@ -72,7 +72,7 @@ body {
 .data-storage .storage-folder {
     position: absolute;
     top: -46px;
-    right: 280px;
+    right: 180px;
     background-color: var(--bgcolor-BigBox);
     border-radius: 10px;
     width: 550px;
